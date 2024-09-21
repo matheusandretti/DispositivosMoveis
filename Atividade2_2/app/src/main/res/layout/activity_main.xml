@@ -2,70 +2,114 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Campo para inserir o primeiro número -->
-    <EditText
-        android:id="@+id/etNumber1"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite o primeiro número"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginTop="40dp"
-        app:layout_constraintWidth_percent="0.7" />
+        android:backgroundTint="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- Campo para inserir o segundo número -->
-    <EditText
-        android:id="@+id/etNumber2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Digite o segundo número"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNumber1"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginTop="20dp"
-        app:layout_constraintWidth_percent="0.7" />
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
 
-    <!-- Botão para somar -->
-    <Button
-        android:id="@+id/btnSum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Somar"
-        app:layout_constraintTop_toBottomOf="@+id/etNumber2"
-        app:layout_constraintEnd_toStartOf="@+id/btnSubtract"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp" />
+            <EditText
+                android:id="@+id/etNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Digite o primeiro número"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <!-- Botão para subtrair -->
-    <Button
-        android:id="@+id/btnSubtract"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Subtrair"
-        app:layout_constraintTop_toBottomOf="@+id/etNumber2"
-        app:layout_constraintStart_toEndOf="@+id/btnSum"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
 
-    <!-- TextView para exibir o resultado -->
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Resultado: "
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/btnSum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="30dp" />
+            <EditText
+                android:id="@+id/etNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Digite o segundo número"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnSum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50sp"
+                    android:layout_marginEnd="20sp"
+                    android:text="Somar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnSubtract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="50sp"
+                    android:text="Subtrair" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado: "
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
