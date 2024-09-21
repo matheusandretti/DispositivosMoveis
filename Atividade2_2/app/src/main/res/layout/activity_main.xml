@@ -31,7 +31,7 @@
                 android:layout_weight="1"
                 android:hint="Digite o primeiro número"
                 android:inputType="numberDecimal"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -45,12 +45,12 @@
 
             <EditText
                 android:id="@+id/etNumber2"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Digite o segundo número"
                 android:inputType="numberDecimal"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:textSize="20sp" />
 
         </LinearLayout>
