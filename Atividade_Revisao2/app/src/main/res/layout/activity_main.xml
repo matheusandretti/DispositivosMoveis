@@ -1,128 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Marcador Pontos (Truco!)"
-        android:textSize="24sp"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:background="@android:color/holo_orange_dark"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginStart="8dp"
+
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="Marcador Pontos (Truco!)"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Button
+                android:id="@+id/btnResetar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@android:color/holo_orange_dark"
+                android:text="Zerar"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                app:icon="@android:drawable/ic_menu_revert" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="50sp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="40dp"
+            android:autoSizeMinTextSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Nós"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="40dp"
+            android:autoSizeMinTextSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Eles"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
         android:gravity="center"
-        android:layout_marginTop="24dp">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tvPontosNos"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="0"
-            android:textSize="64sp"
+            android:autoSizeMaxTextSize="100dp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
             android:gravity="center"
-            android:textColor="@android:color/black" />
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="64sp" />
 
         <TextView
             android:id="@+id/tvPontosEles"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="0"
-            android:textSize="64sp"
+            android:autoSizeMaxTextSize="100dp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
             android:gravity="center"
-            android:textColor="@android:color/black" />
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="64sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.3"
         android:gravity="center"
-        android:layout_marginTop="16dp">
-
-        <Button
-            android:id="@+id/btnMenosNos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-1"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_orange_light" />
-
-        <Button
-            android:id="@+id/btnMaisNos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="+1"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_orange_dark" />
-
-        <Button
-            android:id="@+id/btnMenosEles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="-1"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_orange_light" />
-
-        <Button
-            android:id="@+id/btnMaisEles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="+1"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_orange_dark" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="16dp">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tvVitoriasNos"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="vitórias (0)"
             android:gravity="center"
-            android:textSize="16sp"
-            android:textColor="@android:color/black" />
+            android:text="vitórias (0)"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvVitoriasEles"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="vitórias (0)"
             android:gravity="center"
-            android:textSize="16sp"
-            android:textColor="@android:color/black" />
+            android:text="vitórias (0)"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnResetar"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
-        android:text="Zerar"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:textColor="@android:color/white" />
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMenosNos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="0.1"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="-1"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnMaisNos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="0.1"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="+1"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnMenosEles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="0.1"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="-1"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnMaisEles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="0.1"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="+1"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.dispositivosmoveis.atividade_revisao2
+package com.example.atividade_revisao2
 
 import android.os.Bundle
 import android.widget.Button
@@ -24,10 +24,7 @@ class MainActivity : AppCompatActivity() {
         val btnMaisEles = findViewById<Button>(R.id.btnMaisEles)
         val btnMenosEles = findViewById<Button>(R.id.btnMenosEles)
         val btnResetar = findViewById<Button>(R.id.btnResetar)
-        val tvPontosNos = findViewById<TextView>(R.id.tvPontosNos)
-        val tvPontosEles = findViewById<TextView>(R.id.tvPontosEles)
-        val tvVitoriasNos = findViewById<TextView>(R.id.tvVitoriasNos)
-        val tvVitoriasEles = findViewById<TextView>(R.id.tvVitoriasEles)
+
 
         // Incrementar pontuação "Nós"
         btnMaisNos.setOnClickListener {
@@ -70,6 +67,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun atualizarPlacar() {
+        val tvPontosNos = findViewById<TextView>(R.id.tvPontosNos)
+        val tvPontosEles = findViewById<TextView>(R.id.tvPontosEles)
+        val tvVitoriasNos = findViewById<TextView>(R.id.tvVitoriasNos)
+        val tvVitoriasEles = findViewById<TextView>(R.id.tvVitoriasEles)
         tvPontosNos.text = pontosNos.toString()
         tvPontosEles.text = pontosEles.toString()
         tvVitoriasNos.text = "vitórias ($vitoriasNos)"
@@ -104,6 +105,8 @@ class MainActivity : AppCompatActivity() {
             .setMessage("Tem certeza que deseja começar novamente a pontuação?")
             .setPositiveButton("OK") { dialog, _ ->
                 dialog.dismiss()
+                vitoriasNos = 0
+                vitoriasEles = 0
                 resetarPlacar()
             }
             .setNegativeButton("Cancelar") { dialog, _ ->
