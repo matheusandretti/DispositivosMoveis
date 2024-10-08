@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TaffeBank</string>
+
+    <string-array name="app_name">TaffeBank</string-array>
+    <string name="label_input">Tipo Transação</string>
+
+    <string-array name="tipo_transacao">
+        <item>Credito</item>
+        <item>Debito</item>
+    </string-array>
+
+</resources>
